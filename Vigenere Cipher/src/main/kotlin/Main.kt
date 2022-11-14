@@ -1,5 +1,50 @@
 import java.util.Scanner
 
+/*
+* it's a more like the Caesar cipher take from user two variables
+* the text which is called (plain text) it will be encrypted
+* and the key which is also text but the key must be
+* the same size as the text.
+* if the user inter hello and for the key he entered hi
+* u have to make the key = text size how??
+* add the key at itself character by character like this:
+* ex.{
+*       hello = 5 characters
+*       hi = 2 characters
+*       --------------------
+*       hihih
+*
+*       repeat every character in the key until it equal the text
+*    }
+* 1 - locate the every character index in the alphabets
+*      ex. {
+*               A -> 0  E -> 4  I -> 8  M -> 12  Q -> 16  U -> 20  Y -> 24
+*               B -> 1  F -> 5  G -> 9  N -> 13  R -> 17  V -> 21  Z -> 25
+*               C -> 2  G -> 6  K -> 10 O -> 14  S -> 18  W -> 22
+*               D -> 3  H -> 7  L -> 11 P -> 15  T -> 19  X -> 23
+*
+*               text = hello
+*               h = 7, e = 4, l = 11, o = 14
+*           }
+*
+*  2 - do the same thing to the key locate all of it then plus the two indexes
+*        ex.{
+*             key = hihih , text = hello
+*             7 + 7 = 14 -> o
+*             4 + 8 = 12 -> m
+*             11 + 7 = 18 -> s
+*             11 + 8 = 19 -> t
+*             14 + 7 = 21 -> v
+*
+*             the cipher text = omstv
+*           }
+*
+* E(x) = ( x + n ) \ mod 26.
+*
+* D(x) = ( x + n ) \ mod 26.
+*/
+
+
 fun main(args: Array<String>) {
 
     // initialize list of alphabets
