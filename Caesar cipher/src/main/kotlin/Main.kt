@@ -40,8 +40,8 @@ fun main(args: Array<String>) {
 
     var plainText = ""
     var cipherText = ""
-    var key = 3
-    var select = 2
+    var key = 0
+    var select = 0
     var index = 0
 
     // .trimIndent : Detects a common minimal indent of all the input lines,
@@ -67,14 +67,15 @@ fun main(args: Array<String>) {
     when (select) {
         1 -> {
             print("Enter the plainText : ")
-            plainText = readln()
+            // not tested yet to remove any possible spaces in the input text
+            plainText = readln().replace("\\s+","")
 
             print("Enter the key : ")
             key = input.nextInt()
         }
         2 -> {
             print("Enter the cipherText : ")
-            plainText = readln()
+            plainText = readln().replace("\\s+","")
 
             print("Enter the key : ")
             key = input.nextInt()

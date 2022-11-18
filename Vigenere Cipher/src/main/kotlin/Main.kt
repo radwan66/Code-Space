@@ -77,10 +77,12 @@ fun main(args: Array<String>) {
     when (select) {
         1 -> {
             print("Enter the plainText : ")
-            text = readln()
+            // not tested yet to remove any possible spaces in the input text
+            text = readln().replace("\\s+","")
 
             print("Enter the key : ")
-            key = readln()
+            // not tested yet to remove any possible spaces in the input text
+            key = readln().replace("\\s+","")
             key = makeKey(key,text)
         }
         2 -> {
