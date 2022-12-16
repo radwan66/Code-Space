@@ -1,6 +1,7 @@
 import java.util.Scanner
 
 /*
+My first commet
 * it's a simple idea take from user two variables
 * the text which is called (plain text) it will be encrypted
 * and the key which is just a number
@@ -111,6 +112,7 @@ private fun caesarCipher(
                     alpha[index1 % 26]
                 } else {
                    alpha[index1]
+                    
                 }
             }
         }
